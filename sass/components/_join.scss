@@ -1,0 +1,15 @@
+.join {
+  margin-left: 70px;
+}
+
+.join__title {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: $white-color;
+
+  font-family: $roboto-ss;
+  @include font(14px, 1.14);
+  text-transform: uppercase;
+}

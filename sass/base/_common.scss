@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $white-color;
+  color: $primary-text-color;
+  font-family: $roboto-ss;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* Убираем подчёркивание */
+}
+
+textarea {
+  resize: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include for-size(mobile) {
+    width: 480px;
+  }
+
+  @include for-size(tablet) {
+    width: 768px;
+  }
+
+  @include for-size(desktop) {
+    width: 1200px;
+  }
+}
+
+.centered-flexbox {
+  display: flex;
+  align-items: center;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

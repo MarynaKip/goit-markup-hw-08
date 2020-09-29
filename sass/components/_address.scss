@@ -1,0 +1,19 @@
+.address {
+  display: flex;
+  flex-direction: column;
+
+  color: $white-color;
+  font-style: normal;
+
+  @include font(14px, 1.71);
+}
+
+.address__link {
+  color: $secondary-address-color;
+  margin-top: 9px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

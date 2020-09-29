@@ -1,0 +1,44 @@
+.customer {
+  display: flex;
+  justify-content: space-between;
+  width: 1170;
+}
+
+.customer__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.customer__icon {
+  fill: #afb1b8;
+
+  transition: 250ms;
+  animation: change-client-fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .customer__link:hover &,
+  .customer__link:focus & {
+    fill: $accent-color;
+  }
+}
+
+@keyframes change-client-fill {
+  0% {
+    fill: #afb1b8;
+  }
+  100% {
+    fill: $accent-color;
+  }
+}

@@ -1,0 +1,18 @@
+.logo {
+  color: $accent-color;
+  font-family: $relaway-ss;
+  @include font(26px, 1.2, 0.03em, 700);
+}
+
+.logo--light {
+  color: $title-text-color;
+}
+
+.logo--dark {
+  color: $white-color;
+}
+
+.logo--footer {
+  display: block;
+  margin-bottom: 20px;
+}
