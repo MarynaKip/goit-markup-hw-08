@@ -555,7 +555,14 @@ textarea {
 
 .join {
   margin-top: 60px;
-  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .join {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 165px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -584,11 +591,13 @@ textarea {
 }
 
 .subscribe {
+  margin-top: 60px;
   text-align: center;
 }
 
 @media (min-width: 1200px) {
   .subscribe {
+    margin-top: 0px;
     margin-left: 93px;
     text-align: left;
   }
@@ -612,6 +621,7 @@ textarea {
 .subscribe__input {
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-bottom: 20px;
   width: 100%;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -634,6 +644,7 @@ textarea {
     padding-left: 16px;
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 0px;
   }
 }
 
@@ -1101,6 +1112,13 @@ textarea {
 @media (min-width: 1200px) {
   .footer__content {
     display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    display: flex;
+    align-items: baseline;
   }
 }
 /*# sourceMappingURL=main.css.map */

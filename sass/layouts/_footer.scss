@@ -11,3 +11,10 @@
     display: flex;
   }
 }
+
+.wrap {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: baseline;
+  }
+}
