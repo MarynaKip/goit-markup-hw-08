@@ -25,7 +25,6 @@
 .subscribe__input {
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 16px;
 
   width: 100%;
 
@@ -37,10 +36,15 @@
 
   @include for-size(tablet) {
     width: 450px;
+    margin-left: 166px;
+    margin-right: 152px;
   }
 
   @include for-size(desktop) {
     width: 358px;
+    padding-left: 16px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -49,4 +53,5 @@
 
   font-family: $roboto-ss;
   @include font(16px, 1.25);
+  padding-left: 16px;
 }

@@ -30,7 +30,7 @@
 }
 
 .button--footer {
-  display: block;
+  display: inline-block;
 
   padding-left: 29px;
   padding-right: 62px;
@@ -40,8 +40,6 @@
   background-position: left 148px bottom 13px;
 
   @include for-size(desktop) {
-    display: inline-block;
-
     margin-left: 12px;
   }
 }
