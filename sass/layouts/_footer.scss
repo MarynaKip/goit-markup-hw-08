@@ -3,8 +3,11 @@
 }
 
 .footer__content {
-  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   align-items: baseline;
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }

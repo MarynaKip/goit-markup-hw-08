@@ -3,7 +3,16 @@
 }
 
 .team__list {
-  display: flex;
+  display: block;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 
 .team__item {
@@ -12,8 +21,16 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @include for-size(tablet) {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

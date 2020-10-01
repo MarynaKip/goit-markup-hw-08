@@ -17,3 +17,11 @@
     color: $accent-color;
   }
 }
+
+.address-item {
+  text-align: center;
+
+  @include for-size(desktop) {
+    text-align: left;
+  }
+}

@@ -30,13 +30,20 @@
 }
 
 .button--footer {
-  margin-left: 12px;
+  display: block;
+
   padding-left: 29px;
   padding-right: 62px;
 
   background-image: url(../images/icon-send.png);
   background-repeat: no-repeat;
   background-position: left 148px bottom 13px;
+
+  @include for-size(desktop) {
+    display: inline-block;
+
+    margin-left: 12px;
+  }
 }
 
 .button--modal {

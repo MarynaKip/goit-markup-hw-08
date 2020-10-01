@@ -24,15 +24,19 @@
 
   @include for-size(tablet) {
     width: calc((100% - (30px * 1)) / 2);
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
   }
 
   @include for-size(desktop) {
     width: calc((100% - (30px * 3)) / 4);
-  }
-}
 
-.advantages__item + .advantages__item {
-  margin-left: 30px;
+    & + & {
+      margin-left: 30px;
+    }
+  }
 }
 
 .advantages__title--sign {

@@ -1,7 +1,11 @@
 .logo {
   color: $accent-color;
   font-family: $relaway-ss;
-  @include font(26px, 1.2, 0.03em, 700);
+  @include font(24px, 1.17, 0.03em, 700);
+
+  @include for-size(desktop) {
+    @include font(26px, 1.2, 0.03em, 700);
+  }
 }
 
 .logo--light {
@@ -15,4 +19,13 @@
 .logo--footer {
   display: block;
   margin-bottom: 20px;
+
+  @include for-size(mobile) {
+  }
+
+  @include for-size(tablet) {
+  }
+
+  @include for-size(desktop) {
+  }
 }

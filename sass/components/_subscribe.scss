@@ -1,5 +1,10 @@
 .subscribe {
-  margin-left: 93px;
+  text-align: center;
+
+  @include for-size(desktop) {
+    margin-left: 93px;
+    text-align: left;
+  }
 }
 
 .subscribe__title {
@@ -21,13 +26,22 @@
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
-  width: 358px;
+
+  width: 100%;
 
   background-color: $secondary-bg-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+  @include for-size(tablet) {
+    width: 450px;
+  }
+
+  @include for-size(desktop) {
+    width: 358px;
+  }
 }
 
 .subscribe__input[placeholder="E-mail"] {

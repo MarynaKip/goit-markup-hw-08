@@ -1,5 +1,9 @@
 .workout {
-  display: flex;
+  display: none;
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 
 .workout__item + .workout__item {
