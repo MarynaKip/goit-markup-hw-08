@@ -1,0 +1,35 @@
+.menu-button {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+}
+
+.menu-button__icon {
+  padding-left: 9px;
+}
+
+.menu-button__icon--menu {
+  width: 24px;
+  height: 16px;
+
+  .menu-button.is-open & {
+    display: none;
+  }
+}
+
+.menu-button__icon--close {
+  width: 19px;
+  height: 19px;
+  display: none;
+
+  .menu-button.is-open & {
+    display: block;
+  }
+}

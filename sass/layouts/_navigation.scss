@@ -1,6 +1,10 @@
 .nav {
   display: flex;
   margin-left: 93px;
+
+  @include for-size(tablet) {
+    margin-left: 88px;
+  }
 }
 
 .nav__item:not(:last-child) {
