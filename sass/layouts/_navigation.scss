@@ -3,9 +3,15 @@
   margin-bottom: 60px;
 
   @include for-size(tablet) {
+    margin-right: 84px;
     margin-left: 88px;
+    margin-bottom: 0px;
     display: flex;
+  }
+  @include for-size(desktop) {
+    margin-right: 305px;
     margin-left: 93px;
+    margin-bottom: 0px;
   }
 }
 
@@ -54,9 +60,6 @@
 }
 
 .navigation-wrap {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
@@ -64,11 +67,18 @@
     width: 100vw;
     top: 60px;
     left: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 
     background-color: $white-color;
 
     &.is-open {
       display: block;
     }
+  }
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
   }
 }

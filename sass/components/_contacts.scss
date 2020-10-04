@@ -10,6 +10,9 @@
 
   &:not(:last-child) {
     margin-right: 50px;
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
   }
 }
 

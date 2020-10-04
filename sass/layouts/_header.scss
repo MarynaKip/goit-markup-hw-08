@@ -1,6 +1,9 @@
 .header {
   position: relative;
-  height: 60px;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
 }
 
 .header__line {
