@@ -14,8 +14,7 @@
 }
 
 .contact__link {
-  display: flex;
-  align-items: center;
+  display: block;
 
   color: $primary-text-color;
   @include font(18px, 1.17, 0.02em, 500);
@@ -33,6 +32,8 @@
   }
 
   @include for-size(tablet) {
+    display: flex;
+    align-items: center;
     @include font(12px, 1.17, 0.02em, 500);
   }
 

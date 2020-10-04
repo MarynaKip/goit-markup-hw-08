@@ -14,46 +14,48 @@
   <body>
     <header class="header">
       <div class="header__line"></div>
-      <div class="container centered-flexbox">
-        <nav class="centered-flexbox">
+      <div class="container container--header">
+        <nav class="navigation">
           <a href="./index.html" class="logo">
             Web<span class="logo--light">Studio</span>
           </a>
-          <button type="button" class="menu-button is-open">
+          <button type="button" class="menu-button is-open" data-menu-button>
             <svg class="menu-button__icon" width="40" height="40">
               <use width="24"; class="menu-button__icon--menu" href="./images/sprite.svg#menu_navigation"></use>
               <use class="menu-button__icon--close" href="./images/sprite.svg#close_navigation"></use>
-            </svg>
-            
-            
+            </svg>           
           </button>
-          <ul class="nav">
-            <li class="nav__item nav__item--current">
-              <a href="./index.html" class="nav__link nav__link--current">Студия</a>
-              <div class="nav__line"></div>
-            </li>
+          <div class="navigation-wrap is-open" data-menu>
+            <ul class="nav">
+              <li class="nav__item nav__item--current">
+                <a href="./index.html" class="nav__link nav__link--current">Студия</a>
+                
+              </li>
             
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link">Портфолио</a>
-            </li>
-            <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-          </ul>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link">Портфолио</a>
+              </li>
+              <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
+            </ul>
+            <ul class="contact">
+              <li class="contact__item">
+                <a href="mailto:info@devstudio.com" class="contact__link"><svg class="contact__icon" width="16" height="12">
+                    <use href="./images/sprite.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a>
+              </li>
+              <li class="contact__item">
+                <a href="tel:+380961111111" class="contact__link">
+                  <svg class="contact__icon" width="10" height="16">
+                    <use href="./images/sprite.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a>
+              </li>
+            </ul>
+          </div>
+          
         </nav>
-        <ul class="contact">
-          <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact__link"
-              ><svg class="contact__icon" width="16" height="12">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a>
-          </li>
-          <li class="contact__item">
-            <a href="tel:+380961111111" class="contact__link">
-              <svg class="contact__icon" width="10" height="16">
-                <use href="./images/sprite.svg#smartphone"></use></svg>
-              +38 096 111 11 11</a>
-          </li>
-        </ul>
+        
       </div>
     </header>
     <main>
@@ -124,10 +126,10 @@
               <img
 
                 srcset="
-                ./images/box-1@1x.jpg 1x,
-                ./img/box-1@2x.jpg 2x"
+                ./images/desktop/box-1@1x.jpg 1x,
+                ./images/desktop/box-1@2x.jpg 2x"
                 width="370"
-                src="./images/box-1@1x.jpg"
+                src="./images/desktop/box-1@1x.jpg"
                 alt="Создание веб приложений"
               />
               <div class="workout__description">
@@ -137,10 +139,10 @@
             <li class="workout__item">
               <img
                 srcset="
-                ./images/box-2@1x.jpg 1x,
-                ./img/box-2@2x.jpg 2x"
+                ./images/desktop/box-2@1x.jpg 1x,
+                ./images/desktop/box-2@2x.jpg 2x"
                 width="370"
-                src="./images/box-2@1x.jpg"
+                src="./images/desktop/box-2@1x.jpg"
                 alt="Создание мобильных приложений"
               />
               <div class="workout__description">
@@ -149,10 +151,10 @@
             <li class="workout__item">
               <img 
                 srcset="
-                ./images/box-3@1x.jpg 1x,
-                ./img/box-3@2x.jpg 2x"
+                ./images/desktop/box-3@1x.jpg 1x,
+                ./images/desktop/box-3@2x.jpg 2x"
                 width="370"
-                src="./images/box-3@1x.jpg"
+                src="./images/desktop/box-3@1x.jpg"
                 alt="Подбор дизайна" />
               <div class="workout__description">
                 <p class="workout__text">дизайнерские решения</p></div>
@@ -175,7 +177,11 @@
               </picture> -->
 
               <picture>
-                <img  src="./images/team1-desktop@1x.jpg" alt="team member" />
+                <source media="(min-width: 1200px)" srcset="./images/desktop/team1-desktop@1x.jpg 1x, ./images/desktop/team1-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="./images/tablet/team1-tablet@1x.jpg 1x, ./images/tablet/team1-tablet@2x.jpg 2x">
+                <source media="(min-width: 0px)"
+                  srcset="./images/mobile/team1@1x.jpg 1x, ./images/mobile/team1@2x.jpg 2x">
+                <img  src="./images/desktop/team1-desktop@1x.jpg" alt="team member" />
               </picture>
               
 
@@ -216,7 +222,14 @@
               </div>
             </li>
             <li class="team__item">
-              <img width="270" src="./images/team2.jpg" alt="team member" />
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/desktop/team2-desktop@1x.jpg 1x, ./images/desktop/team2-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./images/tablet/team2-tablet@1x.jpg 1x, ./images/tablet/team2-tablet@2x.jpg 2x">
+                <source media="(min-width: 0px)" srcset="./images/mobile/team2@1x.jpg 1x, ./images/mobile/team2@2x.jpg 2x">
+                <img src="./images/desktop/team2-desktop@1x.jpg" alt="team member" />
+              </picture>
 
               <div class="team__info">
                 <h3 class="team__title">Ольга Репина</h3>
@@ -255,7 +268,14 @@
               </div>
             </li>
             <li class="team__item">
-              <img width="270" src="./images/team3.jpg" alt="team member" />
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/desktop/team3-desktop@1x.jpg 1x, ./images/desktop/team3-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./images/tablet/team3-tablet@1x.jpg 1x, ./images/tablet/team3-tablet@2x.jpg 2x">
+                <source media="(min-width: 0px)" srcset="./images/mobile/team3@1x.jpg 1x, ./images/mobile/team3@2x.jpg 2x">
+                <img src="./images/desktop/team3-desktop@1x.jpg" alt="team member" />
+              </picture>
 
               <div class="team__info">
                 <h3 class="team__title">Николай Тарасов</h3>
@@ -294,7 +314,14 @@
               </div>
             </li>
             <li class="team__item">
-              <img width="270" src="./images/team4.jpg" alt="team member" />
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/desktop/team4-desktop@1x.jpg 1x, ./images/desktop/team4-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="./images/tablet/team4-tablet@1x.jpg 1x, ./images/tablet/team4-tablet@2x.jpg 2x">
+                <source media="(min-width: 0px)" srcset="./images/mobile/team4@1x.jpg 1x, ./images/mobile/team4@2x.jpg 2x">
+                <img src="./images/desktop/team4-desktop@1x.jpg" alt="team member" />
+              </picture>
 
               <div class="team__info">
                 <h3 class="team__title">Михаил Ермаков</h3>
@@ -509,5 +536,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

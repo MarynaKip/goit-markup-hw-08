@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  display: block;
 }
 
 *,
@@ -66,9 +67,11 @@ textarea {
   }
 }
 
-.centered-flexbox {
-  display: flex;
-  align-items: center;
+.container--header {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .is-hidden {
