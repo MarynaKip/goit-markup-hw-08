@@ -575,8 +575,21 @@ textarea {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 767px) {
+  .filter {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 21px;
+  }
 }
 
 .thumb {
@@ -887,6 +900,7 @@ textarea {
 
 @media screen and (max-width: 767px) {
   .navigation-wrap {
+    z-index: 1;
     display: none;
     position: absolute;
     text-align: center;
