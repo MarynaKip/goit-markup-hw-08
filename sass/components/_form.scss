@@ -10,9 +10,9 @@
 
 .form-field__input {
   width: 100%;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 30px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 12px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -26,6 +26,12 @@
   .form-field:focus & {
     border: 1px solid $accent-color;
     outline-color: transparent;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 30px;
   }
 }
 
@@ -61,7 +67,11 @@
   display: block;
   padding-left: 25px;
 
-  @include font(14px, 1.71);
+  @include font(12px, 1.17);
+
+  @include for-size(desktop) {
+    @include font(14px, 1.71);
+  }
 }
 
 .checkbox__input {
@@ -80,7 +90,7 @@
 
   display: inline-block;
   position: absolute;
-  right: 436px;
+  left: 0px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -105,11 +115,11 @@
 }
 
 .form-field__textarea {
-  width: 370px;
+  width: 100%;
+  height: 120px;
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  margin-bottom: 20px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -120,12 +130,16 @@
 
   &[placeholder="Введите текст"] {
     font-family: $roboto-ss;
-    @include font(12px, 1.17, 0.01em);
+    @include font(14px, 1.14, 0.01em);
 
     color: rgba(117, 117, 117, 0.5);
   }
 
   @include for-size(desktop) {
     width: 448px;
+
+    &[placeholder="Введите текст"] {
+      @include font(12px, 1.17, 0.01em);
+    }
   }
 }
