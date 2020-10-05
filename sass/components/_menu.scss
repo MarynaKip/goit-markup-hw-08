@@ -6,6 +6,8 @@
   padding: 0px;
   border: none;
 
+  background-color: $white-color;
+
   @include for-size(tablet) {
     display: none;
   }

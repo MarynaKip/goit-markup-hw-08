@@ -179,6 +179,7 @@ textarea {
   margin: 0px;
   padding: 0px;
   border: none;
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -521,6 +522,7 @@ textarea {
 }
 
 .filter .button {
+  display: block;
   padding: 6px 22px;
   background-color: #f5f4fa;
   color: #212121;
@@ -572,13 +574,25 @@ textarea {
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 767px) {
   .filter {
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
   }
 }
 
@@ -587,8 +601,8 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-  .filter__item {
-    margin-bottom: 21px;
+  .filter__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
   }
 }
 
