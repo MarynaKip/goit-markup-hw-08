@@ -38,6 +38,7 @@
   }
 
   @include for-size(desktop) {
+    width: calc((100% - (30px * 3)) / 4);
     &:not(:last-child) {
       margin-right: 30px;
     }

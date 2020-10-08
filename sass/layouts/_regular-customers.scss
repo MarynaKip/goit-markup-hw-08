@@ -11,6 +11,10 @@
 
 .customer__item {
   margin: 15px;
+
+  @include for-size(desktop) {
+    margin: 0px;
+  }
 }
 
 .customer__link {

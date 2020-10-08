@@ -57,19 +57,19 @@ textarea {
 
 @media (min-width: 480px) {
   .container {
-    width: 462px;
+    width: 480px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 768px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    width: 1182px;
+    width: 1200px;
   }
 }
 
@@ -1223,6 +1223,9 @@ textarea {
 }
 
 @media (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - (30px * 3)) / 4);
+  }
   .team__item:not(:last-child) {
     margin-right: 30px;
   }
@@ -1270,6 +1273,12 @@ textarea {
 
 .customer__item {
   margin: 15px;
+}
+
+@media (min-width: 1200px) {
+  .customer__item {
+    margin: 0px;
+  }
 }
 
 .customer__link {
