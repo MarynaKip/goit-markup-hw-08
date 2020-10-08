@@ -1,5 +1,7 @@
 .advantages {
-  padding-bottom: 0px;
+  @include for-size(desktop) {
+    margin-bottom: 0px;
+  }
 }
 
 .advantages__title {
